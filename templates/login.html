@@ -1,0 +1,19 @@
+{%include "Navbar.html"%}
+{%block content%}
+    <div class="d-flex justify-content-center"style="margin-top:100px ;">
+    <form class="p-3 bg-info" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div class="mb-3 mt-5">
+        <label>password</label>
+        <input class="form-control" name="password">
+        </div>
+        <div class="mb-3">
+        <label>username</label>
+        <input class="form-control" name="username">
+    </div>
+        <button class="btn btn-primary mr-5">Login</button>or<a href = "{% url 'signup' %}"class="btn btn-danger ms-5">Signup</a>
+
+    </form>
+</div>
+
+{% endblock content %}

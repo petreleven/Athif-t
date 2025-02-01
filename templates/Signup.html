@@ -1,0 +1,38 @@
+{%include "Navbar.html"%}
+{%block content%}
+
+
+
+    <div class="d-flex justify-content-center"  style="margin-top: 10px; ;">
+    <form class="p-5 bg-light " method = "post">
+        {%csrf_token%}
+        <div class="mb-3 mt-5">
+            <label>first_name</label>
+            <input class="form-control"  name="first_name">
+            
+
+        </div>
+        <div class="mb-3">
+            <label>last_name</label>
+            <input class="form-control"  name="last_name">
+        </div>
+        <div class="mb-3">
+
+            <label>Email address</label>
+            <input type="email" class="form-control"name="email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label>username</label>
+            <input class="form-control"  name="username">
+        </div>
+        <div class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        
+        
+        <button class="btn btn-danger mr-5">Signup</button>or<a href = "{% url 'loginpage' %}"class="btn btn-primary ms-5">Login</a>
+    </form>
+    </div>
+{%endblock content%}
